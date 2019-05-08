@@ -135,19 +135,34 @@ class ComposerGenerator {
 	function createComposer() {
 		//echo "<pre>"; print_r($this->arrPostData); echo "</pre>";exit;
 
+		$txtKeywordsFinal = $otherDepends = "";
+
 		$arrKeywords = explode(",",$this->arrPostData['txtKeywords']);
-		$txtKeywords = "";
 		foreach ($arrKeywords as $key => $value) {
-			$txtKeywords .= ' "'.trim($value).'",';
+			if(!empty($value)) {
+				$txtKeywords .= ' "'.trim($value).'",';
+			}
+		}
+		$txtKeywords = rtrim($txtKeywords,",");
+
+		if(!empty($txtKeywords)) {
+$txtKeywordsFinal = '
+  "keywords": ['.
+'
+  '.$txtKeywords.
+  '
+  ],';
+		}
+
+		if(!empty($this->arrPostData['txtExtName1'])) {
+$otherDepends = ',
+    "'.$this->arrPostData['txtExtName1'].'": "'.$this->arrPostData['txtExtVersion1'].'"';
 		}
 		
 $strComposer = '{
   "name": "'.$this->arrPostData['txtName'].'",
   "type": "typo3-cms-extension",
-  "description": "'.$this->arrPostData['txtDescription'].'",
-  "keywords": [
-    '.$txtKeywords.'
-  ],
+  "description": "'.$this->arrPostData['txtDescription'].'",'.$txtKeywordsFinal.'
   "authors": [
     {
       "name": "'.$this->arrPostData['txtAuthorName'].'",
@@ -161,7 +176,7 @@ $strComposer = '{
   },
   "license": ["'.$this->arrPostData['txtLicense'].'"],
   "require": {
-    "typo3/cms-core": "'.$this->arrPostData['txtTYPO3Core'].'"
+    "typo3/cms-core": "'.$this->arrPostData['txtTYPO3Core'].'"'.$otherDepends.'
   },
   "autoload": {
     "psr-4": {

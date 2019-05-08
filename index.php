@@ -109,7 +109,7 @@ $objComposer = new ComposerGenerator();
 								<div class="form-separator">
 									<?php
 									if(!empty($objComposer->extensionName)) {
-										echo "<h3>Your extension \"".$objComposer->extensionName."\"</h3>";
+										echo "<h3>Your extension <strong>\"".$objComposer->extensionName."\"</strong></h3>";
 									}
 									else {
 										echo "<h3>Extension's General Details</h3>";
@@ -171,19 +171,19 @@ $objComposer = new ComposerGenerator();
 							<div class="row">
 								<span class="req-input">
 									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Enter Author's Name."> </span>
-									<input value="<?php echo $objComposer->getPostData('txtAuthorName'); ?>" name="txtAuthorName" type="text" placeholder="Enter Author's Name.">
+									<input data-min-length="3" value="<?php echo $objComposer->getPostData('txtAuthorName'); ?>" name="txtAuthorName" type="text" placeholder="Enter Author's Name.">
+								</span>
+							</div>
+							<div class="row">
+								<span class="req-input">
+									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Enter author's Email"> </span>
+									<input value="<?php echo $objComposer->getPostData('txtAuthorEmail'); ?>" name="txtAuthorEmail" type="email" placeholder="Enter Author's Email">
 								</span>
 							</div>
 							<div class="row">
 								<span class="req-input">
 									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Enter Author's Role"> </span>
 									<input value="<?php echo $objComposer->getPostData('txtAuthorRole'); ?>" name="txtAuthorRole" type="text" placeholder="Enter Author's Role">
-								</span>
-							</div>
-							<div class="row">
-								<span class="req-input">
-									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Enter author's Email"> </span>
-									<input value="<?php echo $objComposer->getPostData('txtAuthorEmail'); ?>" name="txtAuthorEmail" type="text" placeholder="Enter Author's Email">
 								</span>
 							</div>
 							<div class="row">
@@ -207,7 +207,7 @@ $objComposer = new ComposerGenerator();
 							<div class="row">
 								<span class="req-input">
 									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Enter license of your TYPO3 extension"> </span>
-									<input value="<?php echo $objComposer->getPostData('txtLicense'); ?>" name="txtLicense" type="text" data-min-length="5" placeholder="Enter license of your TYPO3 extension eg., GPL-3.0">
+									<input value="<?php echo $objComposer->getPostData('txtLicense'); ?>" name="txtLicense" type="text" placeholder="Enter license of your TYPO3 extension eg., GPL-3.0">
 								</span>
 							</div>
 							<div class="row">
