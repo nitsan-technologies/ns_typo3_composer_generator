@@ -21,7 +21,7 @@ $objComposer = new ComposerGenerator();
 	<script type="text/javascript" src="Assets/app.js"></script>
 </head>
 <body>
-	<form id="frmGenerateComposer" method="post" enctype="multipart/form-data" action="/">
+	<form id="frmGenerateComposer" method="post" enctype="multipart/form-data" action="">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 joinComposerTYPO3">
@@ -56,7 +56,7 @@ $objComposer = new ComposerGenerator();
 									?>
 									<div class="col-md-12 invalidPHPFile">
 										<h2>Invalid ext_emconf.php file!</h2>
-										<button type="button" class="btn submit-form" onclick="window.location.href='/';">Try again!</
+										<button type="button" class="btn submit-form" onclick="window.location.href='';">Try again!</
 									</div>
 									<?php
 								}
@@ -74,7 +74,7 @@ $objComposer = new ComposerGenerator();
 									<div class="col-md-3">
 										<h2>Create Composer for New TYPO3 Extension</h2>
 										<div class="row submit-row">
-											<button name="btnNewComposer" id="btnNewComposer" type="button" class="btn btn-block submit-form">Let's Go!</button>
+											<button name="btnNewComposer" id="btnNewComposer" type="button" class="btn btn-block submit-form">Let's Create New Composer.json</button>
 										</div>
 									</div>
 									<div class="col-md-1">
@@ -83,7 +83,7 @@ $objComposer = new ComposerGenerator();
 									<div class="col-md-3">
 										<h2>Download Sample TYPO3 Composer.json</h2>
 										<div class="row submit-row">
-											<button name="btnDownloadComposer" id="btnDownloadComposer" type="button" class="btn btn-block submit-form" onclick="window.location.href='index.php?downloadFile=Downloads/composer.json';">Download Now!</button>
+											<button name="btnDownloadComposer" id="btnDownloadComposer" type="button" class="btn btn-block submit-form" onclick="window.location.href='index.php?downloadFile=Downloads/composer.json';">Download Composer.json Sample</button>
 										</div>
 									</div>
 								<?php

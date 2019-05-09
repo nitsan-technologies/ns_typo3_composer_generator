@@ -218,7 +218,7 @@
 }
 
 .form-container {
-	margin:20px;
+	margin:10px;
 	padding:20px;
 	border-radius:0px;
 	/*background:#B3E5FC;
@@ -396,9 +396,12 @@
 }
 
 .joinComposerTYPO3 {
-	margin: 0px;
-	margin-top: 5px;
+	margin: 0px 10px 10px 0;
+	padding: 0px;
 	/*background: url('TYPO3-Banner-Wallpaper.png') center no-repeat;
 	background-size: cover;
 	height: 320px;*/
+}
+.joinComposerTYPO3 img {
+	max-width: 1120px;
 }
