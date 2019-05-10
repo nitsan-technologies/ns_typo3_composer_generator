@@ -160,7 +160,7 @@ $otherDepends = ',
 		}
 		
 $strComposer = '{
-  "name": "'.$this->arrPostData['txtName'].'",
+  "name": "'.$this->arrPostData['txtVendorPackage'].'",
   "type": "typo3-cms-extension",
   "description": "'.$this->arrPostData['txtDescription'].'",'.$txtKeywordsFinal.'
   "authors": [

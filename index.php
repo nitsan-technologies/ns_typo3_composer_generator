@@ -145,7 +145,7 @@ $objComposer = new ComposerGenerator();
 							<div class="row">
 								<span class="req-input">
 									<span class="input-status" data-toggle="tooltip" data-placement="top" title="Autoload TYPO3 Classes eg., GeorgRinger\\News\\"> </span>
-									<input value="<?php echo $objComposer->getPostData('txtAutoload'); ?>" name="txtAutoload" type="text" placeholder="Autoload TYPO3 Classes eg., GeorgRinger\\News\\">
+									<input value="<?php echo $objComposer->getPostData('txtAutoload'); ?>" name="txtAutoload" type="text" data-min-length="5" placeholder="Autoload TYPO3 Classes eg., GeorgRinger\\News\\">
 								</span>
 							</div>
 							<div class="row">
